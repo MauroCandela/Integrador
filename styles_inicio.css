@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+
+
+.navbar {
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 1000; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  border-bottom: 2px solid #fff;
+}
+
+.navbar_logo-img {
+  height: 110px;
+  margin-left: 25px;
+}
+
+.navbar_lista {
+  display: flex;
+  gap: 60px;
+  padding-right: 35px;
+}
+
+.lista-item a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 3px;
+  position: relative; 
+  transition: border-bottom 0.3s ease; 
+}
+
+.lista-item a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px; 
+  bottom: 0;
+  left: 0;
+  background-color: #fff; 
+  transform: scaleX(0); 
+  transform-origin: right; 
+  transition: transform 0.3s ease; 
+}
+
+.lista-item a:hover::before {
+  transform: scaleX(1); 
+  transform-origin: left; 
+}
+
+
+/* Estilos de la seccion inicio */
+
+.inicio {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.fondo-imagen {
+  width: 100%;
+  height: calc(100vh-110px); 
+  object-fit: cover;
+}
+
+.inicio_texto {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 155px;
+  left: 100px;
+  color: #fff;
+  text-align: center; 
+}
+
+.inicio_texto-titulo{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 65px;
+  text-shadow: 5px 5px 0 #0e0d0d;
+  
+}
+
+.inicio_texto-subtitulo{
+  padding: 15px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 25px;
+  text-shadow: 3px 3px 0 #000;
+}
+
+/* Estilos seccion entrenadores */
+
+.entrenadores {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  background-color: #000;
+  height: 100vh;
+  justify-content: center;
+}
+.titulo-seccion {
+  margin-top: 75px;
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 80px;
+  text-shadow: 5px 5px 0 #3a3535;
+  letter-spacing: 3px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.contenedor-entrenadores {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: row; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  gap: 35px;
+}
+
+.entrenador {
+  text-align: center;
+  animation: fadeIn 1s;
+}
+
+.imagen-container {
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+  border: 4px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  transition: transform 0.3s;
+}
+
+.imagen-container img {
+  width:250px;
+  transition: transform 0.3s;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  transition: opacity 0.3s;
+}
+
+.entrenador:hover .imagen-container {
+  transform: scale(1.05);
+}
+
+.entrenador:hover .overlay {
+  opacity: 1;
+}
+
+h3 {
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.estilos {
+  background-color: #000; 
+  color: #fff; 
+  padding: 50px;
+}
+
+
+.estilos-contenedor {
+  text-align: center;
+  padding: 20px;
+  margin: 40px;
+  display: flex;
+  height: auto;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000; 
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); 
+}
+
+
+.estilos-imagen img {
+  max-width: 100%;
+  height: auto;
+  border: 4px solid #fff; 
+  border-radius: 10px;
+}
+
+
+.estilos-texto {
+width: 550px; 
+  text-align: left;
+}
+
+.estilos-texto h3 {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.estilos-texto li {
+  font-size: 18px;
+  line-height: 2.5;
+  list-style:circle;
+}
+
+
+/* Estilos para la sección de horarios */
+
+.horarios {
+  background-color: #000; 
+  color: #fff; 
+  padding: 50px;
+  text-align: center;
+}
+
+.borde-externo {
+  width: 100%;
+  max-width: 600px; 
+  margin: 0 auto; 
+  position: relative;
+}
+
+.borde-externo table {
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
+}
+
+
+.borde-externo::before,
+.borde-externo::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #fff; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+
+.borde-externo th, .borde-externo td {
+  border: 1px solid #000; 
+  padding: 10px;
+  color: #000; 
+}
+
+
+.borde-externo th {
+  background-color: #000; 
+  color: #fff; 
+  border: 1px solid #fff; 
+}
+
+
+.borde-externo td {
+  background-color: #f7f7f7; 
+}
+
+
+/* Estilos para la sección de contacto */
+.contacto {
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  padding: 50px;
+}
+
+/* Estilos para el contenido de contacto */
+.contenido-contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 25px;
+  align-items: center;
+}
+
+/* Estilos para el formulario de contacto */
+.formulario-contacto {
+  text-align: center;
+}
+
+.formulario-contacto h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.formulario-contacto label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #333; /* Fondo gris oscuro para campos de entrada */
+  border: 1px solid #fff; /* Borde blanco */
+  color: #fff; /* Texto blanco en campos de entrada */
+}
+
+.button {
+  background-image: linear-gradient(135deg, #008aff, #86d472);
+  border-radius: 6px;
+  color: #ffffff;
+  display: flex;
+  height: 50px;
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 4px;
+  text-decoration: none;
+  width: 7em;
+  margin-top: 20px; 
+}
+
+.button:hover {
+  color: #fff;
+}
+
+.button .buttonspan {
+  align-items: center;
+  background: #0e0e10;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
+}
+
+.button:hover .buttonspan {
+  background: transparent;
+}
+
+/* Estilos para la ubicación y el mapa de Google */
+.ubicacion {
+  text-align: center;
+}
+
+.ubicacion h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.ubicacion iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 450px;
+  border: none;
+}
+
+
+
+
+
+
+
+
