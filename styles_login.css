@@ -37,7 +37,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 .inputBox {
   display: flex;
@@ -62,9 +62,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 15px;
   padding: 10px;
 }
-
 .login__button a{
   text-decoration: none;
 }
@@ -80,20 +80,18 @@ body {
   height: 45px;
   width: 130px;
   opacity: 1;
-  background-image: linear-gradient(to right, #000000 0%, #434343  51%, #000000  100%);
+  background-image: linear-gradient(
+    to right,
+    #000000 0%,
+    #434343 51%,
+    #000000 100%
+  );
   box-sizing: border-box;
   font-size: 1.4em;
   font-weight: 600;
   padding: 4px;
   z-index: 2;
   border: 1px solid rgba(0, 0, 0, 0.6);
-}
-
-
-.btn-grad:hover {
-  background-position: right center; 
-  color: #fff;
-  text-decoration: none;
 }
 
 .button--span {
@@ -109,7 +107,7 @@ body {
 }
 
 .button:hover .button--span {
-  animation: buttonstorm 0.7s ease-in-out both;
+  animation: buttonstorm 0.8s ease-in-out both;
   animation-delay: 0.06s;
 }
 

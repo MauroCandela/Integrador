@@ -38,8 +38,8 @@ body {
 }
 .register__sections {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 12px;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
@@ -68,6 +68,9 @@ body {
   margin-top: 15px;
   padding: 10px;
 }
+.register__button a{
+ text-decoration: none;
+}
 
 .button {
   position: relative;
@@ -92,12 +95,6 @@ body {
   padding: 4px;
   z-index: 2;
   border: 1px solid rgba(0, 0, 0, 0.6);
-}
-
-.btn-grad:hover {
-  background-position: right center; 
-  color: #fff;
-  text-decoration: none;
 }
 
 .button--span {
