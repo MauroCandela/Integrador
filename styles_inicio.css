@@ -295,8 +295,8 @@ width: 550px;
 
 /* Estilos para la sección de contacto */
 .contacto {
-  background-color: #000; /* Fondo negro */
-  color: #fff; /* Texto blanco */
+  background-color: #000;
+  color: #fff; 
   padding: 50px;
 }
 
@@ -330,9 +330,13 @@ width: 550px;
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  background-color: #333; /* Fondo gris oscuro para campos de entrada */
-  border: 1px solid #fff; /* Borde blanco */
-  color: #fff; /* Texto blanco en campos de entrada */
+  background-color: #333; 
+  border: 1px solid #fff; 
+  color: #fff; 
+}
+.form_button{
+  display: flex;
+  justify-content: center;
 }
 
 .button {
@@ -360,7 +364,7 @@ width: 550px;
   display: flex;
   justify-content: center;
   height: 100%;
-  transition: background 0.5s ease;
+  transition: 0.5s ease;
   width: 100%;
 }
 
@@ -385,10 +389,69 @@ width: 550px;
   border: none;
 }
 
+/* Estilos para el footer */
 
+.footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #000;
+  color: #fff;
+  padding: 50px;
+  border-top: 2px solid #fff;
+  justify-content:center;
+  align-items: top;
+}
 
+.footer_titulo_uno{
+  font-size: 40px;
+  padding-bottom: 14px;
+}
 
+.footer_titulo_dos{
+  font-size: 40px;
+  text-align: center;
+}
+.footer_titulo_tres{
+  font-size: 40px;
+  text-align: center;
+}
+.footer_texto_uno{
+  text-align: left;
+  padding: 2px;
+}
+.footer_lista{
+  text-align: center;
+}
+.footer_lista_item{
+  padding: 15px;
+}
+.footer_lista_item a{
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: 600;
+  color: #9c9393;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 3px;
+}
+.footer_texto_dos{
+  text-align: center;
+  margin-bottom: 2px;
+}
 
+.footer_texto_tres{
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.footer_redes-iconos{
+  text-align: center;
+}
+.footer_icono{
+  width: 45px;
+  margin-right: 15px;
+}
 
 
 
