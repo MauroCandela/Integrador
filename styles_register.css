@@ -168,17 +168,18 @@ body {
 
 @media (max-width: 422px) {
   .container {
+    min-width: 250px;
     height: auto;
   }
   .register__title {
     font-size: 22px;
   }
   .inputBox {
-    min-width: 250px;
+    min-width: 230px;
     width: auto;
   }
   .inputBox input{
-    width: auto;
+    width: 200px;
   }
 
   .register__link--login{
