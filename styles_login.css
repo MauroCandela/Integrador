@@ -159,21 +159,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 18px;
+  margin: 18px;
 }
 
 .login__link--register {
   margin-left: 7px;
 }
 
-@media (max-width: 392px) {
+@media (max-width: 412px) {
   .container {
     margin: 15px;
-    height: 450px;
+    height: auto;
   }
 
   .login__title {
-    font-size: 25px;
+    font-size: 20px;
+    padding-top: 15px;
   }
   .inputBox {
     width: 240px;

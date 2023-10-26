@@ -155,7 +155,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 18px;
+  margin: 18px;
   font-weight: 700;
 }
 
@@ -163,14 +163,22 @@ body {
   margin-left: 7px;
 }
 
-@media (max-width: 392px) {
+@media (max-width: 422px) {
   .container {
-    height: 580px;
+    height: auto;
   }
   .register__title {
     font-size: 22px;
   }
   .inputBox {
-    width: 250px;
+    min-width: 240px;
+    width: auto;
+  }
+
+  .register__link--login{
+    flex-direction: column;
+  }
+  .register__link--login a{
+    margin-top: 4px;
   }
 }

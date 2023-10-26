@@ -15,7 +15,7 @@
   position: fixed; 
   top: 0; 
   width: 100%; 
-  z-index: 1000; 
+  z-index: 2; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +31,7 @@
 .navbar_lista {
   display: flex;
   gap: 60px;
-  padding-right: 35px;
+  padding-right: 1vw;
 }
 
 .lista-item a {
@@ -63,13 +63,23 @@
   transform-origin: left; 
 }
 
+.checkbtn img {
+  height: 32px;
+  float: right;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
 
+#check {
+  display: none;
+}
 /* Estilos de la seccion inicio */
 
 .inicio {
   display: flex;
-  position: relative;
-  width: 100%;
+  height: auto;
+  margin-top: 5vh;
 }
 
 .fondo-imagen {
@@ -82,15 +92,15 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 155px;
-  left: 100px;
+  top: 28vh;
+  left: 5vw;
   color: #fff;
   text-align: center; 
 }
 
 .inicio_texto-titulo{
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 65px;
+  font-size: 4vw;
   text-shadow: 5px 5px 0 #0e0d0d;
   
 }
@@ -98,7 +108,7 @@
 .inicio_texto-subtitulo{
   padding: 15px;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 25px;
+  font-size: 2vw;
   text-shadow: 3px 3px 0 #000;
 }
 
@@ -109,11 +119,11 @@
   flex-direction: column; 
   align-items: center;
   background-color: #000;
-  height: 100vh;
   justify-content: center;
+  padding: 100px 0;
+  scroll-margin-top: 55px;
 }
 .titulo-seccion {
-  margin-top: 75px;
   text-align: center;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 80px;
@@ -123,17 +133,19 @@
   text-transform: uppercase;
 }
 .contenedor-entrenadores {
-  margin-top: 45px;
+  margin: 25px;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   justify-content: center; 
   flex-wrap: wrap; 
-  gap: 35px;
+  gap: 30px;
 }
 
 .entrenador {
   text-align: center;
   animation: fadeIn 1s;
+  max-width: 250px;
+  margin: 20px;
 }
 
 .imagen-container {
@@ -194,10 +206,12 @@ h3 {
   background-color: #000; 
   color: #fff; 
   padding: 50px;
+  scroll-margin-top: 65px;
 }
 
 
 .estilos-contenedor {
+  scroll-margin-top: 85px;
   text-align: center;
   padding: 20px;
   margin: 40px;
@@ -222,18 +236,20 @@ h3 {
 .estilos-texto {
 width: 550px; 
   text-align: left;
+  margin: 20px;
 }
 
 .estilos-texto h3 {
   text-align: center;
-  font-size: 50px;
+  font-size: 3.5vw;
   margin-bottom: 30px;
 }
 
 .estilos-texto li {
-  font-size: 18px;
-  line-height: 2.5;
+  font-size: 1.5vw;
+  line-height: 2.7;
   list-style:circle;
+  margin-left: 20px;
 }
 
 
@@ -244,6 +260,7 @@ width: 550px;
   color: #fff; 
   padding: 50px;
   text-align: center;
+  scroll-margin-top: 65px;
 }
 
 .borde-externo {
@@ -298,6 +315,7 @@ width: 550px;
   background-color: #000;
   color: #fff; 
   padding: 50px;
+  scroll-margin-top: 65px;
 }
 
 /* Estilos para el contenido de contacto */
@@ -405,6 +423,7 @@ width: 550px;
 .footer_titulo_uno{
   font-size: 40px;
   padding-bottom: 14px;
+  text-align: center;
 }
 
 .footer_titulo_dos{
@@ -416,7 +435,7 @@ width: 550px;
   text-align: center;
 }
 .footer_texto_uno{
-  text-align: left;
+  text-align: center;
   padding: 2px;
 }
 .footer_lista{
@@ -454,4 +473,62 @@ width: 550px;
 }
 
 
+@media (max-width:1250){
+  .estilos-contenedor{
+    padding: 4px;
+    margin: 4px;
+  }
+}
 
+@media (max-width: 840px) {
+  .checkbtn img {
+    display: block;
+  }
+  .navbar_lista{
+    position: fixed;
+    width: 100%;
+    height:100%;
+    flex-direction: column;
+    font-size: larger;
+    font-weight: 700;
+    right: -100%;
+    top: 116px;
+    padding-top: 40px;
+    text-align: center;
+    z-index: 1;
+    background: #000000;
+    gap:40px;
+    transition: right 0.5s ease-in;
+  }
+  .lista-item a{
+    display: block;
+    justify-content: center;
+    height: 50px;
+    align-items:flex-start;
+    border-bottom: 2px solid #fff;
+  }
+  #check:checked ~ .navbar_lista {
+    right: 0;
+  }
+
+  .contenido-contacto{
+    grid-template-columns: auto;
+  }
+  .formulario-contacto{
+    margin-bottom: 15px;
+  }
+  .footer{
+    grid-template-columns: auto;
+  }
+  .footer_informacion{
+    margin-bottom: 40px;
+    
+  }
+  .footer_links{
+    margin-bottom: 40px;
+  }
+  .footer_texto_dos{
+    margin-bottom: 20px;
+  }
+
+}
