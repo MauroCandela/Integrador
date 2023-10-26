@@ -177,6 +177,9 @@ body {
     min-width: 250px;
     width: auto;
   }
+  .inputBox input{
+    width: auto;
+  }
 
   .register__link--login{
     flex-direction: column;
