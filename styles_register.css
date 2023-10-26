@@ -56,6 +56,9 @@ body {
   box-shadow: rgb(219, 219, 219) 3px 3px 6px 0px inset,
     rgba(138, 136, 136, 0.5) -3px -3px 6px 1px inset;
 }
+.inputBox input{
+  background-color: rgb(247, 246, 246);
+}
 .register--input {
   font-size: 18px;
   border: none;
@@ -171,7 +174,7 @@ body {
     font-size: 22px;
   }
   .inputBox {
-    min-width: 240px;
+    min-width: 250px;
     width: auto;
   }
 
