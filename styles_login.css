@@ -173,6 +173,7 @@ body {
 @media (max-width: 412px) {
   .container {
     margin: 15px;
+    min-width: 250px;
     height: auto;
   }
 
@@ -181,6 +182,10 @@ body {
     padding-top: 15px;
   }
   .inputBox {
-    width: 240px;
+    min-width: 230px;
+    width: auto;
+  }
+  .inputBox input{
+    width: 200px;
   }
 }
