@@ -9,6 +9,7 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+/* Estilos del navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -60,7 +61,7 @@
   transform: scaleX(1);
   transform-origin: left;
 }
-
+/* Menu hamburgesa check */
 .checkbtn img {
   height: 32px;
   float: right;
@@ -200,6 +201,8 @@ h3 {
     transform: translateY(0);
   }
 }
+
+/* Estilos de la seccion "estilos" */
 .estilos {
   background-color: #000;
   color: #fff;
@@ -308,7 +311,6 @@ h3 {
   scroll-margin-top: 65px;
 }
 
-/* Estilos para el contenido de contacto */
 .contenido-contacto {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -317,7 +319,6 @@ h3 {
   align-items: center;
 }
 
-/* Estilos para el formulario de contacto */
 .formulario-contacto {
   text-align: center;
 }
@@ -380,7 +381,6 @@ h3 {
   background: transparent;
 }
 
-/* Estilos para la ubicación y el mapa de Google */
 .ubicacion {
   text-align: center;
 }
@@ -502,6 +502,12 @@ h3 {
   .titulo-seccion{
     font-size: 10vw;
   }
+  .overlay{
+    opacity: 1;
+    position:absolute;
+    background-color: #00000000;
+  }
+  
   .estilos-contenedor {
     flex-direction: column;
     justify-content: center;
@@ -509,8 +515,12 @@ h3 {
   .estilos-texto {
     width: auto;
   }
+  .estilos-texto h3 {
+    font-size: 6vw;
+  }
   .lista_estilos li {
     font-size: 2.7vw;
+    font-weight: 600;
   }
   .contenido-contacto {
     grid-template-columns: auto;
@@ -529,5 +539,12 @@ h3 {
   }
   .footer_texto_dos {
     margin-bottom: 20px;
+  }
+}
+
+
+@media (max-width: 540px){
+  .navbar_logo-img{
+    margin-left: 7px;
   }
 }
